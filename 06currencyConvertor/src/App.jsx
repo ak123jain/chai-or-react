@@ -8,7 +8,7 @@ import useCurrencyInfo from './hooks/useCurrrencyInfo'
 
 function App() {
 
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState("")
   const [from, setFrom] = useState("inr")
   const [to, setTo] = useState("usd")
   const [convertedAmount, setConvertedAmount] = useState(0)
@@ -18,6 +18,7 @@ function App() {
   const options = Object.keys(currencyInfo)
   console.log('Currency Options:', options);
 
+  
   const swap = () => {
     setFrom(to)
     setTo(from)
@@ -50,7 +51,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={((currency) => setFrom(currency))}
+                            onCurrencyChange={((amount) => setAmount(amount))}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
