@@ -14,9 +14,9 @@ function App() {
 
   return (
     <>
-       <h1 className='w-full h-full text-wrap text-centre  bg-green-400 text-black p-14  rounded-xl mb-9 ' >tailwind teast</h1>
-       <Card  username="chai or code" btntext="click" />
-       <Card  username="hitesh" btntext="ccclickedd"  />
+       <h1 className='w-full h-full text-wrap text-centre  bg-green-400 text-black p-14  rounded-xl mb-7 ' >tailwind teast</h1>
+        <Card  username="akash" someObj ={myobj} btnTeaxt="click me to visit google" />
+        <Card  username="shakahj" btnTeaxt="visit me" />
     </>
   )
 }

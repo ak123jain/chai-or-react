@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-function Card({username , btntext = "visit me"} ) {
-    console.log(username);
+function Card({username , btnTeaxt} ) {
+    //console.log(props);
     return (
         <div className="relative h-[400px] w-[300px] rounded-md  ">
         <img
@@ -18,7 +18,7 @@ function Card({username , btntext = "visit me"} ) {
             debitis?
           </p>
           <button  className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-             {btntext  }
+              {btnTeaxt}
           </button>
         </div>
       </div>

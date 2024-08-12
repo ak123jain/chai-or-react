@@ -1,43 +1,44 @@
-function customRender(reactElement,container){
-    /*
-    const domElement = document.createElement(reactElement.type)
-    domElement.innerHTML = reactElement.children
-    domElement.setAttribute('href', reactElement.props.href)
-    domElement.setAttribute('target', reactElement.props.target)
+ 
 
-    container.appendChild(domElement)
-    */
+function  customRender(mainContainer , reactElement) {
+    // const domelement = document.createElement(reactElement.type)
+    // domelement.innerHTML = reactElement.children
+    // domelement.setAttribute('href', reactElement.props.href)
+    // domelement.setAttribute('target', reactElement.props.target)
+    // mainContainer.appendChild(domelement)
 
-    const domElement = document.createElement(reactElement.type)
-    domElement.innerHTML = reactElement.children
-     for (const prop in reactElement.props) {
-         if(prop ===  'children') continue;
-         domElement.setAttribute(prop, reactElement.props[prop])
-     }
-     container.appendChild(domElement)
+    const domelement = document.createElement(reactElement.type)
+    domelement.innerHTML = reactElement.children
+
+    for (const prop in  reactElement.props) {
+        if(prop == 'children') continue;
+
+        domelement.setAttribute(prop, reactElement.props[prop])
+    }
+
+    mainContainer.appendChild(domelement)
 }
+
+ 
 
 
 const reactElement = {
     type : 'a',
     props:{
-        href:'https://google.com',
-        target: '_blank'
+        href: 'https://google.com',
+        target : '_blank'
     },
-    children: 'click me to visit google'
+    children: "click me to visit"
 }
 
 
 
-const maincontainer = document.querySelector('#root')
+const mainContainer = document.querySelector('#root')
 
 
-customRender(reactElement , maincontainer)
+customRender(mainContainer, reactElement)
 
-
-
-
-
+ 
 
 
 
